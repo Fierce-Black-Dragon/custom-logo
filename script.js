@@ -23,6 +23,7 @@ const colors = [
 
 const umbrellaImg = document.querySelector("#umbrella");
 const uploadBtn = document.querySelector("#uploadBtn");
+const logoImg = document.getElementById("selectedLogo");
 const loader = document.querySelector("#loader");
 const buttonGrpDiv = document.querySelector("#buttons");
 const inputLogo = document.querySelector("#logo");
@@ -37,6 +38,7 @@ function printBtn() {
     //   const id = colors[i].id;
     btn.addEventListener("click", async (e) => {
       umbrellaImg.style.display = "none";
+      logoImg.style.display = "none";
       document.body.style.backgroundColor = colors[e.target.id].bg;
       uploadBtn.style.backgroundColor = colors[e.target.id].bg;
       const url = colors[e.target.id].src;
@@ -47,6 +49,7 @@ function printBtn() {
     umbrellaImg.addEventListener("load", () => {
       loader.src = "";
       umbrellaImg.style.display = "block";
+      logoImg.style.display = "block";
     });
     buttonGrpDiv.appendChild(btn);
   }
@@ -68,7 +71,7 @@ const fileHandler = (e) => {
     //read file
     const reader = new FileReader();
     reader.addEventListener("load", (event) => {
-      document.getElementById("selectedLogo").src = event.target.result;
+      logoImg.src = event.target.result;
     });
 
     reader.readAsDataURL(file);
