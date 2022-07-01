@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom u</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body onload="printBtn();">
+    <div class="grid">
+      <div class="umbrella__img__Section">
+        <div class="imgandLogo">
+          <img src="" alt="" id="loader" />
+          <img src="./assets/BlueUmbrella.png" class="umbrella" id="umbrella" />
+
+          <img class="logo" id="selectedLogo" />
+        </div>
+      </div>
+
+      <div class="umbrella__functionality__Section">
+        <h1>Custom Umbrella</h1>
+        <div class="colorButtons" id="buttons"></div>
+
+        <p>
+          Upload a logo for an instant preview.
+          <br />
+          .png and .jpg files only. Max file size is 5MB.
+        </p>
+
+        <label htmlFor="logo">
+          <div id="uploadBtn">
+            <img src="./assets/upload_icon.svg" />
+            <p id="hide">Upload Logo</p>
+            <input
+              id="logo"
+              name="logo"
+              type="file"
+              accept="image/png, image/jpeg"
+              placeholder="Upload image"
+            />
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

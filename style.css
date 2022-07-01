@@ -1,0 +1,125 @@
+.grid {
+  display: grid;
+  grid-template-columns: 50fr;
+  color: black;
+  height: 92vh;
+  justify-content: center;
+  align-self: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.umbrella__img__Section,
+.umbrella__functionality__Section {
+  justify-content: center;
+  align-self: center;
+}
+.imgandLogo {
+  margin: 0 auto;
+  position: relative;
+}
+.imgandLogo .umbrella {
+  margin: 0 auto;
+  height: 20rem;
+}
+.imgandLogo .logo {
+  position: absolute;
+  top: 80%;
+  left: 42%;
+  height: 2rem;
+  width: fit-content;
+}
+/* colors button */
+.circle {
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.colorButtons button {
+  margin: 0 0.2rem;
+}
+.colorButtons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.blueBtn {
+  border: 2px solid lightblue;
+}
+.blueBtn:focus {
+  border: 5px solid lightblue;
+}
+.pinkBtn {
+  border: 2px solid lightpink;
+}
+.pinkBtn:focus {
+  border: 5px solid lightpink;
+}
+.yellowBtn {
+  border: 2px solid #fdf9c6;
+}
+.yellowBtn:focus {
+  border: 5px solid #fdf9c6;
+}
+input[type="file"] {
+  display: none;
+}
+#uploadBtn {
+  width: 400px;
+  padding: 0.25rem;
+  display: flex;
+  text-align: center;
+  background-color: #23afe2;
+  color: white;
+  font-size: 1.2rem;
+  border: 3px solid;
+  max-width: 500px;
+  justify-content: flex-start;
+  align-items: center;
+}
+#uploadBtn p {
+  margin-left: 40%;
+  margin-top: 2%;
+}
+.loadersvg {
+}
+#loader {
+  animation-name: ckw;
+  animation-duration: 15.5s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  left: 50%;
+}
+@keyframes ckw {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 804px) {
+  .grid {
+    grid-template-columns: repeat(2, 50fr);
+    grid-column-gap: 4fr;
+    justify-content: space-evenly;
+  }
+  .imgandLogo {
+    margin: 0 20%;
+    position: relative;
+  }
+  .imgandLogo .umbrella {
+    height: 20rem;
+  }
+
+  .imgandLogo .logo {
+    position: absolute;
+    top: 80%;
+    left: 35%;
+    height: 2.5rem;
+    width: fit-content;
+  }
+}
